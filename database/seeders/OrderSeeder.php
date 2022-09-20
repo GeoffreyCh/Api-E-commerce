@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Integer;
+use Illuminate\Support\Facades\DB;
 
 class OrderSeeder extends Seeder
 {
@@ -15,8 +16,8 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('orders')->insert([
-            'no_order' => Integer::random(8),
-        ]);
+        // DB::table('orders')->insert([
+        //     'no_order' => Integer::random(8),
+        // ]);
     }
 }

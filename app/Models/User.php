@@ -48,7 +48,7 @@ class User extends Authenticatable
     }
 
     function items(){
-        return $this->hasMany(Item::class, 'surfs', 'items_id', 'users_id');
+        return $this->belongsToMany(Item::class, 'surfs', 'items_id', 'users_id');
     }
 
     function cards(){
