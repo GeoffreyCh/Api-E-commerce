@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Decimal;
 use Illuminate\Support\Text;
+use Illuminate\Support\Facades\DB;
 
 class ItemsSeeder extends Seeder
 {
