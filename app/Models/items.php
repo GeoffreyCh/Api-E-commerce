@@ -9,9 +9,11 @@ class items extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
 
     function cards(){
-        $this->belongsToMany(card::class, "card_items", "cards_id", "items_id");
+        return $this->belongsToMany(card::class, "card_items", "cards_id", "items_id");
     }
 
     function users(){

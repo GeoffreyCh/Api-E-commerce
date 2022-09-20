@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->foreignId(column: 'cards_id')->constrained(table: 'cards')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId(column: 'cards_id')->constrained(table: 'cards')->onUpdate('cascade')->onDelete('cascade')->default(null);
 
             // $table->timestamps();
         });
