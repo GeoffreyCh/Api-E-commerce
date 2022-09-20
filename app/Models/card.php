@@ -19,10 +19,10 @@ class card extends Model
     }
 
     function items(){
-        return $this->hasMany(item::class, "card_items", "cards_id", "items_id");
+        return $this->belongsToMany(item::class, "card_items", "cards_id", "items_id");
     }
 
     function users(){
-        return $this->belongsTo(user::class);
+        return $this->belongsTo(user::class, 'users_id');
     }
 }
