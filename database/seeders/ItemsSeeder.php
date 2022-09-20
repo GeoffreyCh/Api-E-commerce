@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use Illuminate\Support\Decimal;
+use Illuminate\Support\Text;
 
 class ItemsSeeder extends Seeder
 {
@@ -14,6 +17,11 @@ class ItemsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('users')->insert([
+            'title' => Str::random(8),
+            'description' => Text::random(30),
+            'image' => Str::random(10),
+            'price' => Decimal::random('password'),
+        ]);
     }
 }
