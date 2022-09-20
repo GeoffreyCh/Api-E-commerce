@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::ressource('users', UserController::class);
+Route::ressource('cards', CardController::class);
+Route::ressource('items', ItemController::class);
