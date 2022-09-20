@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class card_item extends Model
 {
     use HasFactory;
+
+   
 }

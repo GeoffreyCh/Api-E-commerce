@@ -30,4 +30,12 @@ return new class extends Migration
     {
         Schema::dropIfExists('surves');
     }
+
+    function users(){
+        return $this->belongsToMany(User::class);
+    }
+
+    function items(){
+        return $this->belongsToMany(Item::class);
+    }
 };
