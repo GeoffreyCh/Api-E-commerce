@@ -18,7 +18,7 @@ class CardSeeder extends Seeder
     public function run()
     {
         DB::table('cards')->insert([
-            'number_item' => TypeInteger::random(2),
+            'nb_item' => TypeInteger::random(2),
             'total_price' => TypeInteger::random(3),
         ]);
     }
