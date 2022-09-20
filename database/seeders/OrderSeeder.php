@@ -16,8 +16,8 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('orders')->insert([
-            'no_order' => Integer::random(8),
-        ]);
+        // DB::table('orders')->insert([
+        //     'no_order' => Integer::random(8),
+        // ]);
     }
 }

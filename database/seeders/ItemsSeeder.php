@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
+use Faker\Factory;
 use Illuminate\Support\Str;
-use Illuminate\Support\Decimal;
 use Illuminate\Support\Text;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Decimal;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class ItemsSeeder extends Seeder
 {
@@ -18,11 +19,13 @@ class ItemsSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        $faker = Factory::create();
+
+        DB::table('items')->insert([
             'title' => Str::random(8),
-            'description' => Text::random(30),
-            'image' => Str::random(10),
-            'price' => Decimal::random('password'),
+            'description' => Str::random(50),
+            'image_url' => Str::random(10),
+            'price' => $faker->randomFloat(2, 0, 100),
         ]);
     }
 }
