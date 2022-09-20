@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('users', UserController::class);
-Route::resource('cards', CardController::class);
-Route::resource('items', ItemController::class);
+
+// Route::resource('user', App\Http\Controllers\UsersController::class);
+Route::resource('items', App\Http\Controllers\ItemsController::class);
+Route::resource('cards', App\Http\Controllers\CardController::class);
+
