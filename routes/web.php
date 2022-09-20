@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CardController;
+use App\Http\Controllers\ItemsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::ressource('users', UserController::class);
-Route::ressource('cards', CardController::class);
-Route::ressource('items', ItemController::class);
+Route::resource('users', UserController::class);
+Route::resource('cards', CardController::class);
+Route::resource('items', ItemController::class);
