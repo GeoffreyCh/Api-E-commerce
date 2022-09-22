@@ -1,0 +1,241 @@
+[33mcommit 76b18389f800cdecf2392e03074994549177cf4d[m[33m ([m[1;36mHEAD -> [m[1;32mlaravel-sanctum[m[33m)[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Thu Sep 22 10:29:13 2022 +0200
+
+    ok
+
+[33mcommit fbdab1478130a36e533062a97aa8d017fa1a7bb8[m[33m ([m[1;31morigin/laravel-sanctum[m[33m)[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Thu Sep 22 10:08:14 2022 +0200
+
+    install laravel sanctum + AuthController
+
+[33mcommit f78250631af5078a53c5721d81e391d7a1a29ef7[m[33m ([m[1;32mdeveloppement[m[33m)[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Tue Sep 20 17:01:41 2022 +0200
+
+    update laravel sanctum not finish
+
+[33mcommit fe4aa2f6010c349689882f65b1f43ec3b459d45f[m
+Merge: e5949c4 6299d5c
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 12:23:47 2022 +0200
+
+    Merge branch 'developpement' of https://github.com/GeoffreyCh/Api-e-commerce into developpement
+
+[33mcommit e5949c4195e4a8ec5b421ac40cfc9c512135dce7[m
+Merge: 16060fd 2f91467
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 12:23:16 2022 +0200
+
+    Merge branch 'seeders' into developpement
+
+[33mcommit 2f91467bc50af351d578fa4a30ecd53458083434[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 12:22:52 2022 +0200
+
+    route
+
+[33mcommit 6299d5cabdb4f9cbbb041d524fd2c3eb72e25aa2[m
+Merge: 16060fd 6dc6bd9
+Author: Theo L <103069441+Mouloujac@users.noreply.github.com>
+Date:   Tue Sep 20 12:11:38 2022 +0200
+
+    Merge pull request #5 from GeoffreyCh/jevousemmerde
+    
+    Merge pull request #4 from GeoffreyCh/developpement
+
+[33mcommit 6dc6bd988758d4626ca4fc35ed11a4ae5354a741[m
+Merge: 82f69fb 16060fd
+Author: Theo L <103069441+Mouloujac@users.noreply.github.com>
+Date:   Tue Sep 20 11:49:20 2022 +0200
+
+    Merge pull request #4 from GeoffreyCh/developpement
+    
+    Developpement
+
+[33mcommit 16060fd9c697a1835541a51bb1dec846f5d19c76[m
+Merge: a3d1500 5ff598a
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Tue Sep 20 11:46:22 2022 +0200
+
+    Merge branch 'controllerCard' into developpement
+
+[33mcommit 5ff598a5192cacd756ffa54aef5fdf34cceade81[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Tue Sep 20 11:45:08 2022 +0200
+
+    update model
+
+[33mcommit a3d1500f889b6b03e677c5520e463eaa54d23113[m
+Merge: fdffb3b 306874a
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 11:40:58 2022 +0200
+
+    Merge branch 'developpement' of https://github.com/GeoffreyCh/Api-e-commerce into developpement
+
+[33mcommit fdffb3b60af674a5f3379a18c3998f4477be7c8e[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 11:36:54 2022 +0200
+
+    seeders faker
+
+[33mcommit 306874a4df0bc5c468055b921778049274c721de[m
+Merge: 8c7b6b8 82f69fb
+Author: Theo L <103069441+Mouloujac@users.noreply.github.com>
+Date:   Tue Sep 20 11:28:37 2022 +0200
+
+    Merge pull request #3 from GeoffreyCh/jevousemmerde
+    
+    Models
+
+[33mcommit 82f69fbe776ccae873189bd739c04bf309b9354f[m
+Author: Mouloujac <103069441+Mouloujac@users.noreply.github.com>
+Date:   Tue Sep 20 11:24:35 2022 +0200
+
+    Models
+
+[33mcommit 8c7b6b8d831895b4573f9bae9108c783cbb276cf[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 11:20:43 2022 +0200
+
+    seeders
+
+[33mcommit b5543c61d31f84a3e631d395b08d41e2d1ffbe7a[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 11:05:47 2022 +0200
+
+    seeders
+
+[33mcommit 35654ce09b156dc09cf5b9df8da71496ae0b5767[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 10:59:42 2022 +0200
+
+    seeders
+
+[33mcommit 2f110860db5a74c62d22190b448578f8a5fd072d[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 10:56:54 2022 +0200
+
+    seeders v2
+
+[33mcommit cb10cad6d447cd27b392bac3d7942d5eb0364927[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 09:51:20 2022 +0200
+
+    seeders db
+
+[33mcommit 27e4c1f6651bf40dd3dbade46f52259b702e36bb[m
+Merge: 9c0e2d2 4bb2e3a
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 09:35:58 2022 +0200
+
+    Merge branch 'developpement' of https://github.com/GeoffreyCh/Api-e-commerce into seeders
+
+[33mcommit 9c0e2d2e7e5caef396bb7a4e1e8b8baad594b553[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Tue Sep 20 09:35:07 2022 +0200
+
+    seeders
+
+[33mcommit 4bb2e3a58b1588a2503824b1636f8a649c95e1df[m
+Merge: c4ea335 261e7db 7b9a314
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Tue Sep 20 09:28:28 2022 +0200
+
+    Merge branch 'migrations', remote-tracking branch 'origin' into developpement
+
+[33mcommit 7b9a314bfc630ac195f40798b7b2ac74049a565c[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Mon Sep 19 17:04:35 2022 +0200
+
+    foreign key migrations
+
+[33mcommit c4ea3351c4d3deb6eb4d463abf1b461f196f6725[m
+Merge: 94d2ed8 d2e72bb
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 16:38:45 2022 +0200
+
+    gitignore
+
+[33mcommit 94d2ed8575053ea62a9e6a205fa55ed45971b34f[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 16:36:37 2022 +0200
+
+    migrate
+
+[33mcommit d2e72bb9952f4d3d2e66f861a50c81b20a20533d[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Mon Sep 19 16:23:40 2022 +0200
+
+    gitignore .env
+
+[33mcommit 31cfe6ca1f934a96be5b21fe7d2c40f53dd3997c[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Mon Sep 19 16:20:35 2022 +0200
+
+    modif .env
+
+[33mcommit 75d91811ca138c03c624cf3402aa778342ef5c62[m
+Merge: 2596998 994369a
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 15:54:50 2022 +0200
+
+    Merge branch 'migrations' into developpement
+
+[33mcommit 994369aebcbcf54615f6b24fdc908b40f34cedaf[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 15:54:27 2022 +0200
+
+    request true
+
+[33mcommit fddb9565876d9036d3425584083a8877cf05ab85[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 15:35:29 2022 +0200
+
+    make model
+
+[33mcommit 25969988ce2b1e7873d0fe425184a94dc9189c76[m[33m ([m[1;31morigin/theo[m[33m)[m
+Author: Mouloujac <103069441+Mouloujac@users.noreply.github.com>
+Date:   Mon Sep 19 15:31:26 2022 +0200
+
+    test
+
+[33mcommit 47e20b2db319f543a68fc2d9e594dbc54f85ad21[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 15:28:13 2022 +0200
+
+    test
+
+[33mcommit 261e7dbcd2359c38f5a82590c08c97686397daeb[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 0007f7d a0ef997
+Author: Theo L <103069441+Mouloujac@users.noreply.github.com>
+Date:   Mon Sep 19 15:23:47 2022 +0200
+
+    Merge pull request #1 from GeoffreyCh/theo
+    
+    Theo
+
+[33mcommit a0ef9971aba7a1d8a5246ef519a23e56c1de6947[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 15:17:24 2022 +0200
+
+    migration item
+
+[33mcommit caa39a8fdabb11e1c9ac306efa53e0ea9e5c3b25[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 15:03:11 2022 +0200
+
+    .env
+
+[33mcommit 0007f7dc1e66e909ea73b3851b6fa9cc3738f1c9[m[33m ([m[1;32mmain[m[33m)[m
+Author: Nicolas REITIN <contact@nicolas-reitin.fr>
+Date:   Mon Sep 19 14:27:50 2022 +0200
+
+    add  model items
+
+[33mcommit adb86fd00c8028069d1fda8d2e04cc5bf4b9e465[m
+Author: GeoffreyCh <gc.geoffrey.c@gmail.com>
+Date:   Mon Sep 19 14:18:26 2022 +0200
+
+    initial commit
