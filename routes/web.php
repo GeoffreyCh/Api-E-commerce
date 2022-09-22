@@ -19,4 +19,3 @@ use App\Http\Controllers\ItemsController;
 Route::get('/', function () {
     return view('welcome');
 });
-

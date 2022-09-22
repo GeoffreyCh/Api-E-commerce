@@ -9,6 +9,8 @@ class card extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'nb_items',
         'total_price',
@@ -19,7 +21,7 @@ class card extends Model
     }
 
     function items(){
-        return $this->belongsToMany(item::class, "card_items", "cards_id", "items_id");
+        return $this->belongsToMany(items::class, "card_items", "cards_id", "items_id");
     }
 
     function users(){

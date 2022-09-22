@@ -23,7 +23,6 @@ return new class extends Migration
             $table->rememberToken();
             $table->foreignId(column: 'cards_id')->constrained(table: 'cards')->onUpdate('cascade')->onDelete('cascade')
                 ->nullable();
-
             // $table->timestamps();
         });
     }
