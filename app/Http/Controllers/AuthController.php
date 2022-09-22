@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\card;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -15,7 +16,7 @@ class AuthController extends Controller
         $validate = Validator::make($request->all(),
         [
             'name' => 'required|string|max:255',
-            'pseudo'=>'required|string|max:255', 
+            'pseudo'=>'required|string|max:255',
             'email'=>'required|email|unique:users',
             'password'=>'required',
         ]);
@@ -26,12 +27,32 @@ class AuthController extends Controller
                 'errors'=>$validate->errors()
             ], 401);
         }
-        $user = User::create([
-            'name' => $request->name,
-            'pseudo' => $request->pseudo,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
-        ]);
+
+        // $user = User::create([
+        //     'name' => $request->name,
+        //     'pseudo' => $request->pseudo,
+        //     'email' => $request->email,
+        //     'password' => Hash::make($request->password)
+        // ]);
+
+        $user = new User();
+        $user->pseudo = $request->pseudo;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+
+        $user->save();
+
+        $card = new card();
+        $card->nb_item = 0;
+        $card->total_price = 0;
+        $card->users_id = $user->id;
+
+        $card->save();
+
+        $user->cards_id = $card->id;
+
+        $user->save();
 
         return response()->json([
             'status' => true,
