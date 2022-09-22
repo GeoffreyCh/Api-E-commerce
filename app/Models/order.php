@@ -9,6 +9,8 @@ class order extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     function users(){
         return $this->belongsTo(user::class, 'users_id');
     }
