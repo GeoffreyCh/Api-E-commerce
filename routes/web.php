@@ -27,6 +27,9 @@ Route::post('api/addItems/{item}/{cards}', [App\Http\Controllers\ItemsController
 Route::post('api/delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteCard']);
 
 Route::post('api/user', [App\Http\Controllers\UsersController::class, 'saveUsers']);
+Route::post('api/editUser/{id}', [App\Http\Controllers\UsersController::class, 'updateUser']);
 Route::get('api/user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers']);
+
+// Route::post('api/delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteItem']);
 
 

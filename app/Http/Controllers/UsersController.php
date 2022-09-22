@@ -18,12 +18,6 @@ class UsersController extends Controller
     }
 
 
-    public function create()
-    {
-        //
-    }
-
-
     public function saveUsers(Request $request)
     {
         $pseudo = $request->input('pseudo');
@@ -68,20 +62,23 @@ class UsersController extends Controller
     }
 
 
-    public function edit(User $user)
+    public function updateUser(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+
+        $pseudo = $request->input('pseudo');
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $user->pseudo = $pseudo;
+        $user->name = $name;
+        $user->email = $email;
+        $user->password = $password;
+
+        $user->update();
+
+        return response()->json("success");
     }
 
-
-    public function update(UpdateUserRequest $request, User $user)
-    {
-        //
-    }
-
-
-    public function destroy(User $user)
-    {
-        //
-    }
 }

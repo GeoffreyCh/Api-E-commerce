@@ -18,12 +18,6 @@ class ItemsController extends Controller
     }
 
 
-    public function create()
-    {
-
-    }
-
-
     public function saveItems(StoreitemsRequest $request)
     {
         $title = $request->input('title');
@@ -50,24 +44,6 @@ class ItemsController extends Controller
         $item = items::find($id);
 
         return response()->json($item);
-    }
-
-
-    public function edit(items $items)
-    {
-        //
-    }
-
-
-    public function update(UpdateitemsRequest $request, items $items)
-    {
-        //
-    }
-
-
-    public function destroy(items $items)
-    {
-        //
     }
 
 
