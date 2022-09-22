@@ -18,6 +18,14 @@ class CardController extends Controller
     }
 
 
+    public function show(card $card)
+    {
+        $items = $card->items;
+
+        return response()->json($items);
+    }
+
+
     // public function deleteItem(card $card, item $item)
     // {
 
