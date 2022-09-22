@@ -38,27 +38,6 @@ class AuthController extends Controller
             'message' => 'Utilisateur créé',
             'token'=> $user->createToken('Token')->plainTextToken
         ], 200);
-        // $validatedData = $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'pseudo'=>'required|string|max:255',
-        //     'email' => 'required|email|max:255',
-        //     'password' => 'required|string|min:8'
-        // ]);
-
-        // $user = User::create([
-        // 'name' => $validatedData['name'],
-        // 'pseudo' => $validatedData['pseudo'],
-        // 'email' => $validatedData['email'],
-        // 'password' => Hash::make($validatedData['password']),
-        // ]);
-
-
-        // $token = $user->createToken('auth_token')->plainTextToken;
-
-        // return response()->json([
-        //     'access_token' => $token,
-        //     'token_type' => 'Bearer',
-        // ]);
     }
 
     public function login(Request $request)
@@ -87,6 +66,12 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-        return $request->user()->currentAccessToken()->delete();
+        // return $request->user()->currentAccessToken()->delete();
+        $delete = $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'delete' => $delete,
+            'message' => 'Utilisateur déconnecté',
+    ]);
     }
 }

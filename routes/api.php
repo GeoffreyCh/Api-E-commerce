@@ -24,9 +24,9 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/me', [AuthController::class, 'me']);
+Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 Route::resource('/items', App\Http\Controllers\ItemsController::class)->middleware('auth:sanctum');
 
