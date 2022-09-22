@@ -13,7 +13,7 @@ class items extends Model
 
 
     function cards(){
-        return $this->belongsToMany(card::class, "card_items", "cards_id", "items_id");
+        return $this->belongsToMany(card::class, "card_items", "items_id", "cards_id");
     }
 
     function users(){

@@ -78,11 +78,26 @@ class ItemsController extends Controller
 
         $card = card::find($cards);
 
-        echo count($card->items);
-
         $item->cards()->attach($card);
 
-        $card->nb_item = count($card->items);
+        $card->nb_item++;
+        $card->total_price = $card->total_price + $item->price;
+
+        $card->update();
+    }
+
+
+    public function deleteCard(items $item, $cards)
+    {
+        echo $item;
+        echo $cards;
+
+        $card = card::find($cards);
+
+        $item->cards()->detach($card);
+
+        $card->nb_item--;
+        $card->total_price = $card->total_price - $item->price;
 
         $card->update();
     }

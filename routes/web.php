@@ -23,7 +23,8 @@ Route::resource('cards', App\Http\Controllers\CardController::class);
 
 Route::post('api/items', [App\Http\Controllers\ItemsController::class, 'saveItems']);
 Route::get('api/items/{id}', [App\Http\Controllers\ItemsController::class, 'showItems']);
-Route::post('api/items/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'addCard']);
+Route::post('api/addItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'addCard']);
+Route::post('api/delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteCard']);
 
 Route::post('api/user', [App\Http\Controllers\UsersController::class, 'saveUsers']);
 Route::get('api/user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers']);
