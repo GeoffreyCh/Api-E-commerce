@@ -27,15 +27,15 @@ Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
-Route::resource('user', App\Http\Controllers\UsersController::class);
-Route::resource('items', App\Http\Controllers\ItemsController::class);
-Route::resource('cards', App\Http\Controllers\CardController::class);
+// Route::resource('user', App\Http\Controllers\UsersController::class);
+// Route::resource('items', App\Http\Controllers\ItemsController::class);
+Route::resource('cards', App\Http\Controllers\CardController::class)->middleware('auth:sanctum');
 
-Route::post('items', [App\Http\Controllers\ItemsController::class, 'saveItems']);
+Route::post('items', [App\Http\Controllers\ItemsController::class, 'saveItems'])->middleware('auth:sanctum');
 Route::get('items/{id}', [App\Http\Controllers\ItemsController::class, 'showItems']);
-Route::post('addItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'addCard']);
-Route::post('delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteCard']);
+Route::post('addItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'addCard'])->middleware('auth:sanctum');
+Route::post('delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteCard'])->middleware('auth:sanctum');
 
 // Route::post('api/user', [App\Http\Controllers\UsersController::class, 'saveUsers']);
-Route::post('editUser/{id}', [App\Http\Controllers\UsersController::class, 'updateUser']);
-Route::get('user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers']);
+Route::post('editUser/{id}', [App\Http\Controllers\UsersController::class, 'updateUser'])->middleware('auth:sanctum');
+Route::get('user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers'])->middleware('auth:sanctum');
