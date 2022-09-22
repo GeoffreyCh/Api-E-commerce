@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\card;
+use App\Models\items;
 use App\Http\Requests\StorecardRequest;
 use App\Http\Requests\UpdatecardRequest;
 
@@ -47,7 +48,8 @@ class CardController extends Controller
      */
     public function show(card $card)
     {
-        //
+        // $total_card = items::find($card);
+        // return response()->json($card);
     }
 
     /**
