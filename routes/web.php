@@ -19,7 +19,3 @@ use App\Http\Controllers\ItemsController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::resource('user', UserController::class);
-Route::resource('card', CardController::class);
-Route::resource('items', ItemsController::class);

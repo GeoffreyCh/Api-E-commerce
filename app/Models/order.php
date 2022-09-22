@@ -10,10 +10,10 @@ class order extends Model
     use HasFactory;
 
     function users(){
-        return $this->belongsTo(user::class);
+        return $this->belongsTo(user::class, 'users_id');
     }
 
     function cards(){
-        return $this->belongsTo(card::class);
+        return $this->belongsTo(card::class, 'cards_id');
     }
 }

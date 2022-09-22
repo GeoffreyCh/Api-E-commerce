@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Ramsey\Uuid\Type\Decimal;
+use Ramsey\Uuid\Type\Integer;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Integer;
-use Illuminate\Support\Decimal;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class CardSeeder extends Seeder
 {
@@ -17,9 +17,9 @@ class CardSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cards')->insert([
-            'number_item' => Integer::random(8),
-            'total_price' => Decimal::random(10),
-        ]);
+        // DB::table('cards')->insert([
+        //     'nb_item' => TypeInteger::random(2),
+        //     'total_price' => TypeInteger::random(3),
+        // ]);
     }
 }
