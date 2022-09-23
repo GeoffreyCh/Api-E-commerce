@@ -43,7 +43,7 @@ class OrderController extends Controller
 
         $card = $user->cards->last();
 
-        Mail::to('gc.geoffrey.c@gmail.com')->send(new sendMail($order));
+        Mail::to($user->email)->send(new sendMail($order));
 
         $card->date_achat = now();
         echo $card;
