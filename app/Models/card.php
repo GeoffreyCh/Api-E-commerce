@@ -25,6 +25,6 @@ class card extends Model
     }
 
     function users(){
-        return $this->belongsTo(user::class, 'users_id');
+        return $this->hasOne(user::class, 'users_id');
     }
 }

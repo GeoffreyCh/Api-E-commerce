@@ -15,6 +15,8 @@ class adminMail extends Mailable
     use Queueable, SerializesModels;
 
     public $order = [];
+    public $user = [];
+    public $card = [];
 
     public function __construct(order $order)
     {
