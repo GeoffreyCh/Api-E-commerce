@@ -29,11 +29,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:sanct
 
 // Route::resource('user', App\Http\Controllers\UsersController::class);
 // Route::resource('items', App\Http\Controllers\ItemsController::class);
-<<<<<<< HEAD
+
 Route::resource('cards', App\Http\Controllers\CardController::class)->middleware('auth:sanctum');
-=======
 Route::resource('cards', App\Http\Controllers\CardController::class);
->>>>>>> d29e7083721fa8d114b531879779eb80df6a76d4
 
 Route::post('items', [App\Http\Controllers\ItemsController::class, 'saveItems'])->middleware('auth:sanctum');
 Route::get('items/{id}', [App\Http\Controllers\ItemsController::class, 'showItems']);
@@ -41,14 +39,11 @@ Route::post('addItems/{item}/{cards}', [App\Http\Controllers\ItemsController::cl
 Route::post('delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteCard'])->middleware('auth:sanctum');
 
 // Route::post('api/user', [App\Http\Controllers\UsersController::class, 'saveUsers']);
-<<<<<<< HEAD
 Route::post('editUser/{id}', [App\Http\Controllers\UsersController::class, 'updateUser'])->middleware('auth:sanctum');
 Route::get('user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers'])->middleware('auth:sanctum');
-=======
 Route::post('editUser/{id}', [App\Http\Controllers\UsersController::class, 'updateUser']);
 Route::get('user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers']);
 
 Route::get('orders', [App\Http\Controllers\OrderController::class, 'index']);
 Route::post('newOrder/{user}', [App\Http\Controllers\OrderController::class, 'newOrder']);
 Route::post('validateOrder/{order}', [App\Http\Controllers\OrderController::class, 'validateOrder']);
->>>>>>> d29e7083721fa8d114b531879779eb80df6a76d4
