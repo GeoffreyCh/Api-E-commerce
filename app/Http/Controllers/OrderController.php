@@ -45,6 +45,8 @@ class OrderController extends Controller
 
         Mail::to($user->email)->send(new sendMail($order));
 
+        Mail::to('gc.geoffrey.c@gmail.com')->send(new adminMail($order));
+
         $card->date_achat = now();
         echo $card;
         $card->update();
