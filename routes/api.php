@@ -21,6 +21,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:sanct
 
 Route::post('editUser/{id}', [App\Http\Controllers\UsersController::class, 'updateUser'])->middleware('auth:sanctum');
 Route::get('user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers'])->middleware('auth:sanctum');
+Route::get('users', [App\Http\Controllers\UsersController::class, 'index']);
 
 
 //------------------------------------Cards------------------------------------------
