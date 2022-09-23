@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('nb_item');
             $table->decimal('total_price');
             $table->date('date_achat')->nullable()->default(null);
-            $table->foreignId(column: 'users_id')->constrained(table: 'users')->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreignId(column: 'users_id')->constrained(table: 'users')->onUpdate('cascade')->onDelete('cascade');
 
             // $table->timestamps();
         });
