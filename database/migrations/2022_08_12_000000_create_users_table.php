@@ -22,11 +22,11 @@ return new class extends Migration
                 ->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->foreignId(column: 'cards_id')
-                ->nullable()->default(null)
-                ->constrained(table: 'cards')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
+            // $table->foreignId(column: 'cards_id')
+            //     ->nullable()->default(null)
+            //     ->constrained(table: 'cards')
+            //     ->onUpdate('cascade')
+            //     ->onDelete('cascade');
             // $table->timestamps();
         });
     }
