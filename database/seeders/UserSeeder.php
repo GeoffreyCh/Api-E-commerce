@@ -18,13 +18,13 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Factory::create();
+        // $faker = Factory::create();
 
-        DB::table('users')->insert([
-            'pseudo' => $faker->userName,
-            'name' => $faker->userName,
-            'email' => $faker->userName .'@gmail.com',
-            'password' => Hash::make('password'),
-        ]);
+        // DB::table('users')->insert([
+        //     'pseudo' => $faker->userName,
+        //     'name' => $faker->userName,
+        //     'email' => $faker->userName .'@gmail.com',
+        //     'password' => Hash::make('password'),
+        // ]);
     }
 }
