@@ -58,6 +58,10 @@ class UsersController extends Controller
     {
         $user = User::find($id);
 
+        $card = $user->cards;
+
+        $items = $card[0]->items;
+
         return response()->json($user);
     }
 

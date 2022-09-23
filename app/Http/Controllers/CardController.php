@@ -24,7 +24,7 @@ class CardController extends Controller
     {
         $items = $card->items;
 
-        return response()->json($items);
+        return response()->json($card);
     }
 
 
