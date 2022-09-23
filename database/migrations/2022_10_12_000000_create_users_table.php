@@ -18,10 +18,15 @@ return new class extends Migration
             $table->string('pseudo');
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at')
+                ->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->foreignId(column: 'cards_id')->nullable()->default(null)->constrained(table: 'cards')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId(column: 'cards_id')
+                ->nullable()->default(null)
+                ->constrained(table: 'cards')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             // $table->timestamps();
         });
     }
