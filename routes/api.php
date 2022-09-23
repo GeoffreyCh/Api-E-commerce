@@ -29,7 +29,8 @@ Route::resource('cards', App\Http\Controllers\CardController::class)->middleware
 
 
 //------------------------------------Items------------------------------------------
-Route::post('items', [App\Http\Controllers\ItemsController::class, 'saveItems'])->middleware('auth:sanctum');
+Route::get('items', [App\Http\Controllers\ItemsController::class, 'index']);
+Route::post('saveItems', [App\Http\Controllers\ItemsController::class, 'saveItems'])->middleware('auth:sanctum');
 Route::get('items/{id}', [App\Http\Controllers\ItemsController::class, 'showItems']);
 Route::post('addItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'addCard'])->middleware('auth:sanctum');
 Route::post('delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::class, 'deleteCard'])->middleware('auth:sanctum');

@@ -73,6 +73,7 @@ class OrderController extends Controller
 
         foreach ($orders as $order) {
             if($order->users_id == $user->id){
+                $card = $order->cards->items;
                 array_push($orderUser, $order);
             }
         }
