@@ -30,22 +30,6 @@ class CardController extends Controller
 
 
 
-    public function showHistoric(User $user)
-    {
-        $cards = card::all();
-
-        $cardUser = [];
-
-        foreach ($cards as $card) {
-            if($card->users_id == $user->id){
-                array_push($cardUser, $card);
-            }
-        }
-
-        return response()->json($cardUser);
-    }
-
-
     // public function deleteItem(card $card, item $item)
     // {
 

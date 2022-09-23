@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\order;
 use App\Models\card;
 use App\Mail\sendMail;
+use App\Mail\adminMail;
 use App\Http\Requests\StoreorderRequest;
 use App\Http\Requests\UpdateorderRequest;
 
@@ -29,7 +30,7 @@ class OrderController extends Controller
 
         $order = new order();
         $order->no_order = mt_rand(1000000, 9999999);
-        $order->cards_id = $user->cards[0]->id;
+        $order->cards_id = $user->cards_id;
         $order->users_id = $user->id;
         $order->save();
 
@@ -41,20 +42,19 @@ class OrderController extends Controller
     {
         $user = User::find($order->users_id);
 
-        $card = $user->cards->last();
+
 
         Mail::to($user->email)->send(new sendMail($order));
 
         Mail::to('gc.geoffrey.c@gmail.com')->send(new adminMail($order));
 
-        $card->date_achat = now();
-        echo $card;
-        $card->update();
+        $order->date_achat = now();
+        $order->update();
 
         $newCard = new card();
         $newCard->nb_item = 0;
         $newCard->total_price = 0;
-        $newCard->users_id = $user->id;
+        // $newCard->users_id = $user->id;
 
         $newCard->save();
 
@@ -62,5 +62,21 @@ class OrderController extends Controller
 
         $user->update();
 
+    }
+
+
+    public function showHistoric(User $user)
+    {
+        $orders = order::all();
+
+        $orderUser = [];
+
+        foreach ($orders as $order) {
+            if($order->users_id == $user->id){
+                array_push($orderUser, $order);
+            }
+        }
+
+        return response()->json($orderUser);
     }
 }

@@ -26,7 +26,6 @@ Route::get('users', [App\Http\Controllers\UsersController::class, 'index']);
 
 //------------------------------------Cards------------------------------------------
 Route::resource('cards', App\Http\Controllers\CardController::class)->middleware('auth:sanctum');
-Route::get('showHistoric/{user}', [App\Http\Controllers\cardController::class, 'showHistoric']);
 
 
 //------------------------------------Items------------------------------------------
@@ -40,5 +39,6 @@ Route::post('delItems/{item}/{cards}', [App\Http\Controllers\ItemsController::cl
 Route::get('orders', [App\Http\Controllers\OrderController::class, 'index'])->middleware('auth:sanctum');
 Route::post('newOrder/{user}', [App\Http\Controllers\OrderController::class, 'newOrder'])->middleware('auth:sanctum');
 Route::post('validateOrder/{order}', [App\Http\Controllers\OrderController::class, 'validateOrder'])->middleware('auth:sanctum');
+Route::get('showHistoric/{user}', [App\Http\Controllers\OrderController::class, 'showHistoric']);
 
 

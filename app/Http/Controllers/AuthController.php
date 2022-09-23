@@ -46,7 +46,6 @@ class AuthController extends Controller
         $card = new card();
         $card->nb_item = 0;
         $card->total_price = 0;
-        $card->users_id = $user->id;
 
         $card->save();
 
