@@ -43,3 +43,5 @@ Route::get('user/{id}', [App\Http\Controllers\UsersController::class, 'showUsers
 Route::get('orders', [App\Http\Controllers\OrderController::class, 'index']);
 Route::post('newOrder/{user}', [App\Http\Controllers\OrderController::class, 'newOrder']);
 Route::post('validateOrder/{order}', [App\Http\Controllers\OrderController::class, 'validateOrder']);
+
+Route::get('showHistoric/{user}', [App\Http\Controllers\cardController::class, 'showHistoric']);
